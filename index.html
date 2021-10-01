@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>SchrodingerModel</title>
+  </head>
+  <body><span style="font-family: Segoe UI;"> </span>
+    <h1 style="text-align: center;"><span style="font-family: Segoe UI;"><b>Visualizing
+          An Atom<br>
+        </b></span></h1>
+    <span style="font-family: Segoe UI;"> </span>
+    <p><span style="font-family: Segoe UI;"><span style=" color:#000000;">&nbsp;&nbsp;&nbsp;
+          This is not a complete course on concepts in quantum mechanics. We
+          assume the audience had at least a semester in undergraduate quantum
+          mechanics. The derivation of the wavefunction(s) along with many core
+          concepts have been left out. There are many sources that develop
+          quantum mechanic more fully than we will. We suggests </span><span style=" color:#800000;"></span><span
+
+          style=" color:#000000;"> <i>Introduction to Quantum Mechanics</i> by
+          Griffiths or Modern Quantum Mechanics by Sakurai as starting resources
+          on the subject. We will try to develop basic concepts to understand
+          the visuals presented. The main goal is to visualize the single
+          electron hydrogen atom in the framework of quantum mechanics as
+          described by the Schrödinger equation and Dirac equation.</span></span></p>
+    <span style="font-family: Segoe UI;"> </span>
+    <h1 style="text-align: center;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">Part
+          1: The Schrödinger Model</span></span></h1>
+    <span style="font-family: Segoe UI;"> </span>
+    <p><span style="font-family: Segoe UI;">&nbsp;&nbsp;&nbsp; A
+        non-relativistic electron in a spherical potential, namely the Coulomb
+        potential, can be modeled using the <span style=" color:#000000;">Schrödinger
+          equation</span></span></p>
+    <p><span style="font-family: Segoe UI;"><span style=" color:#000000;"><br>
+        </span></span></p>
+    <span style="font-family: Segoe UI;"> </span>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="SEQ01.png"
+
+          alt="" title="SchrodingerEquationSimple" style="width: 299px; height: 70px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <span style="font-family: Segoe UI;"> </span>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;">where
+        the probability density of the electron is given by <i>|ψ|<sup>2</sup>=ψ<sup>*</sup>ψ</i>.
+        The Hamiltonian above assumes a stationary nucleus of charge <i>Ze</i>.
+        Motion of the nucleus can be introduced by taking the reduced mass, <i>μ=m<sub>N</sub>m<sub>e</sub>/(m<sub>N</sub>+m<sub>e</sub>)</i>,
+        where <i>m<sub>N</sub></i> is the mass of the nucleus, instead of the
+        electron mass, <i>m<sub>e</sub></i>. We can define the correction
+        factor as <i>M=1/(1+m<sub>e</sub>/m<sub>N</sub>)</i> and it is clear
+        that M approaches unity for heavy nuclei. For a hydrogen atom, <i>M≈0.99946</i>.
+        For our purposes, it is sufficient to consider a stationary nucleus
+        relative to the electron motion.<br>
+      </span> </div>
+    <span style="font-family: Segoe UI;"> </span>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;">&nbsp;&nbsp;&nbsp;
+        Since the Hamiltonian has spherical symmetry, we choose to work in
+        spherical coordinates. The <span style=" color:#000000;">Schrödinger
+          equation expands to become</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;"><br>
+        </span></span></div>
+    <span style="font-family: Segoe UI;"> </span>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="SEQ02.png"
+
+          alt="" title="SchrodingerEquationSpherical" style="width: 590px; height: 70px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;">The
+        solutions to this differential equation is separable and takes the form
+        of</span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="Wavefunction01.png"
+
+          alt="" title="WavefunctionSimple" style="width: 445px; height: 30px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;">where <i>R<sub>n,l</sub>(r)</i>
+        describes the radial distribution and the spherical harmonics <i>Y<sub>l</sub><sup>ml</sup>(θ,ϕ)</i>
+        describes the angular distribution. These functions are defined as</span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="Wavefunction02.png"
+
+          alt="" title="WavefunctionExpanded" style="width: 657px; height: 200px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;">where <i>L<sup>α</sup><sub>N</sub>(x)</i>
+        is the generalized Laguerre polynomial and <i>P<sub>l</sub><sup>ml</sup>(x)</i>
+        is the associated Legendre polynomial. <i>a<sub>0</sub></i> is the Bohr
+        radius for an electron in the hydrogen atom. It is useful to note that
+        the only <i>ϕ</i> dependence of the wavefunction <i>ψ<sub>n,l,ml</sub>(r,θ,ϕ)</i>
+        is <i>exp(im<sub>l</sub>ϕ)</i>. The consequence of this is the
+        probability density of <i>ψ<sub>n,l,ml</sub>(r,θ,ϕ)</i> is independent
+        of <i>ϕ</i> and therefore has cylindrical symmetry. It is enough to
+        view the planar cross-section described by the <i>ρ-z</i> plane where <i>ρ</i>
+        is the radial vector projection onto the azimuthal plane.</span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;">&nbsp;&nbsp;&nbsp;
+        The index <i>n,l,m<sub>l</sub></i> describe the eigenstate(s) of the
+        Hamiltonian associated with the eigenvalue <i>E</i>. <i>n</i> is
+        typically referred to as the principal quantum number and uniquely
+        determines the energy level of the atom, i.e. the eigenvalue <i>E</i>
+        is only dependent on <i>n</i>, <i>E → E<sub>n</sub></i>. Solving for
+        the energy in the <span style=" color:#000000;">Schrödinger equation
+          yields</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;"><br>
+        </span></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="Energy.png"
+
+          alt="" title="Energy" style="width: 217px; height: 70px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">The
+          principal quantum number takes on any positive integer values, <i>n∈ℤ<sub>+</sub></i>.</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">&nbsp;&nbsp;&nbsp;
+          The orbital quantum number <i>l</i> describes the shape of the
+          orbital. This is evident in the fact that both the radial and angular
+          functions depend on <i>l</i>. In fact, there are <i>l</i> angular
+          nodes and <i>n-l-1</i> radial nodes. Of the <i>l</i> angular nodes,
+          <i>|m<sub>l</sub>|</i> of the nodes lie in the <i>x-y</i> plane while
+          the remaining <i>l-|m<sub>l</sub>|</i> nodes lie in the <i>ρ-z</i>
+          plane. Values of <i>l</i> are non-negative integer up to and
+          including <i>n-1</i>, </span><span style=" color:#000000;"><i>l∈{0,1,...,n-1}</i>.
+          <i>m<sub>l</sub></i> is the magnetic quantum number. It determines the
+          shift in energy levels of atomic orbitals in the presence of an
+          external magnetic field. Values of <i>m<sub>l</sub></i> are from <i>-l</i>
+          to <i>+l</i> in integer steps, <i>m<sub>l</sub></i></span><span style=" color:#000000;"><i>∈{-l,-l+1,...,l-1,l}</i>.</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">&nbsp;&nbsp;&nbsp;
+          The charge of the nucleus does not affect the overall shape of the
+          orbitals. The dependence on the charge, <i>Z</i>, is only in the
+          radial function and energy eigenvalue. This means that the charge only
+          affects how tightly bounded the electron is. The charge, <i>Z</i>,
+          sets the scale size of the orbitals and the binding energy of the
+          state. This is what we would expect given the Coulomb potential.<br>
+        </span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">&nbsp;&nbsp;&nbsp;
+          Electrons are fermions with spin <i>1/2</i>. The quantum numbers s
+          and ms describe the spin state of the electron. The solution to the </span><span
+
+          style=" color:#000000;">Schrödinger equation with a static electric
+          potential does not account for the spin nature of the electron. The
+          energy eigenstates for an electron bound to a nucleus can be extended
+          to include spin by taking</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;"><br>
+        </span></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="Wavefunction03.png"
+
+          alt="" title="WavefunctionSpin" style="width: 373px; height: 36px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">where
+          χms are eigenstates of the spin operator, <i>S<sup>2</sup></i>, and
+          the spin projection operator, <i>S<sub>z</sub></i>. For an electron,
+          <i>m<sub>s</sub>=±1/2</i> which corresponds to alignment and
+          anti-alignment with the <i>z</i>-axis, and are the eigenvalues of <i>S<sub>z</sub></i>
+          (the eigenvalues are </span><i><span style=" color:#000000;">±</span></i><span
+
+          style=" color:#000000;"><i>ℏ/2</i> when using S.I. units). The spin
+          states do not affect the electron probability distribution of pure
+          eigenstates in the </span><span style=" color:#000000;">Schrödinger
+          model in the absence of an external magnetic field. The inclusion of
+          spin in our model is for the completeness of the quantum state.<br>
+        </span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">&nbsp;&nbsp;&nbsp;
+          The wavefunction are energy eigenstates of the Hamiltonian for an
+          electron in a Coulomb potential with energy eigenvalues given by <i>E<sub>n</sub></i>.
+          Any normalized linear combinations of these eigenstates are valid
+          solutions to the Hamiltonian and are valid states for the electron.</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;"><br>
+        </span></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="Wavefunction04.png"
+
+          alt="" title="WavefunctionSuperposition" style="width: 337px; height: 160px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">&nbsp;&nbsp;&nbsp;
+          Some authors choose to present the orbitals in a different basis than
+          the ones we have chosen. These basis mixes ml states, breaking the
+          cylindrical symmetry and will typically align an orbital lobe with the
+          coordinate grid. Eigenstates for <i>m<sub>l</sub>=0</i> remain
+          unchanged in this basis, and for <i>m<sub>l</sub>≠0</i>, the basis
+          wavefunctions can be defined as</span></span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;"><br>
+        </span></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><img src="Wavefunction05.png"
+
+          alt="" title="WavefunctionBasisChange" style="width: 337px; height: 176px;"></span></div>
+    <div style="text-align: center;"><span style="font-family: Segoe UI;"><br>
+      </span></div>
+    <div style="text-align: left;"><span style="font-family: Segoe UI;"><span style=" color:#000000;">We
+          denote such states as <i>|m<sub>l</sub>|<sub>+</sub></i> and <i>|m<sub>l</sub>|<sub>-</sub></i>
+          to not confuse them with spherical harmonic basis, <i>m<sub>l</sub></i>.<br>
+        </span></span></div>
+    <div style="text-align: center;">
+      <h1><span style="font-family: Segoe UI;"><span style=" color:#000000;">Spectroscopic
+            Notation</span></span></h1>
+      <p style="text-align: left;"><span style="font-family: Segoe UI;">&nbsp;&nbsp;&nbsp;
+          We will describe the eigenstates in spectroscopic notation. The
+          quantum state described by <i>n,l,s,m<sub>l</sub>,m<sub>s</sub></i>
+          is written as</span></p>
+      <span style="font-family: Segoe UI;"><img src="SpecNote01.png" alt="" title="SpectroscopicNotationmlms"
+
+          style="width: 137px; height: 40px;"></span>
+      <p style="text-align: left;"><span style="font-family: Segoe UI;">where <i><b>L</b></i>
+          is given by <i>l</i> by the mapping</span></p>
+      <img src="SpecTable.png" alt="" title="LconversionTable" style="width: 448px; height: 65px;">
+      <p style="text-align: left;"><span style="font-family: Segoe UI;">with <i>l≥6</i>
+          continuing the Latin alphabet. For a single electron atom, <i>s=1/2</i>
+          and is implicitly implied when the quantum state is described as <i>n,l,m<sub>l</sub>,m<sub>s</sub></i>.For
+          an electron in an atom, the notation simplifies to</span></p>
+      <span style="font-family: Segoe UI;"><img src="SpecNote02.png" alt="" title="SpectroscopicNotationS=1/2"
+
+          style="width: 100px; height: 40px;"></span>
+      <p style="text-align: left;"><span style="font-family: Segoe UI;">&nbsp;&nbsp;&nbsp;
+          It is also worth mentioning that the use of <i>m<sub>l</sub>,m<sub>s</sub></i>
+          is typically not standard. Spectroscopic notation is usually used to
+          denote the quantum state of total angular momentum, <i>n,l,s,j,m<sub>j</sub></i>.
+          <i>j</i> and <i>m<sub>j</sub></i> are eigenvalues for <i>J<sup>2</sup></i>
+          and <i>J<sub>z</sub></i>, the operators associated with total angular
+          momentum where <i><b>J</b>=<b>L</b>+<b>S</b></i>. Values for j ranges
+          from <i>|l-s| to |l+s|</i> in integer increments and <i>m<sub>j</sub>=m<sub>l</sub>+m<sub>s</sub></i>.
+          Spectroscopic notation is</span></p>
+      <span style="font-family: Segoe UI;"><img src="SpecNote03.png" alt="" title="SpectroscopicNotationjmj"
+
+          style="width: 93px; height: 47px;"></span>
+      <p style="text-align: left;"><span style="font-family: Segoe UI;"><i>m<sub>j</sub></i>
+          also typically not noted.</span></p>
+      <h1 style=" text-align: center;"><span style="font-family: Segoe UI;">Orbital
+          Visualization</span></h1>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_1,0,0.png"
+
+          alt="" title="|1,0,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,2,2.png" alt="" title="|4,2,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,3,1.png"
+
+          alt="" title="|6,3,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,4,3.png" alt="" title="|7,4,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;"><img src="SchrodingerHydrogen2DGlobal.png"
+
+          alt="" title="OrbitalGlobalScale" style="width: 1602px; height: 400px;"></div>
+      <div style="text-align: center;"><img src="SchrodingerHydrogen2DLocal.png"
+
+          alt="" title="OrbitalLocalScale" style="width: 1602px; height: 400px;"></div>
+      <div style="text-align: center;"><img src="PeriodicTableSchrodinger.png" alt=""
+
+          title="PeriodicTableOrbital" style="width: 1602px; height: 722px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_1,0,0.png"
+
+          alt="" title="|1,0,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_2,0,0.png" alt="" title="|2,0,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_2,1,0.png"
+
+          alt="" title="|2,1,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_2,1,1.png" alt="" title="|2,1,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_3,0,0.png"
+
+          alt="" title="|3,0,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_3,1,0.png" alt="" title="|3,1,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_3,1,1.png"
+
+          alt="" title="|3,1,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_3,2,0.png" alt="" title="|3,2,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_3,2,1.png"
+
+          alt="" title="|3,2,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_3,2,2.png" alt="" title="|3,2,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,0,0.png"
+
+          alt="" title="|4,0,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,1,0.png" alt="" title="|4,1,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,1,1.png"
+
+          alt="" title="|4,1,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,2,0.png" alt="" title="|4,2,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,2,1.png"
+
+          alt="" title="|4,2,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,2,2.png" alt="" title="|4,2,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,3,0.png"
+
+          alt="" title="|4,3,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,3,1.png" alt="" title="|4,3,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,3,2.png"
+
+          alt="" title="|4,3,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_4,3,3.png" alt="" title="|4,3,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,0,0.png"
+
+          alt="" title="|5,0,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,1,0.png" alt="" title="|5,1,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,1,1.png"
+
+          alt="" title="|5,1,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,2,0.png" alt="" title="|5,2,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,2,1.png"
+
+          alt="" title="|5,2,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,2,2.png" alt="" title="|5,2,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,3,0.png"
+
+          alt="" title="|5,3,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,3,1.png" alt="" title="|5,3,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,3,2.png"
+
+          alt="" title="|5,3,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,3,3.png" alt="" title="|5,3,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,4,0.png"
+
+          alt="" title="|5,4,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,4,1.png" alt="" title="|5,4,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,4,2.png"
+
+          alt="" title="|5,4,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,4,3.png" alt="" title="|5,4,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_5,4,4.png"
+
+          alt="" title="|5,4,4,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,0,0.png" alt="" title="|6,0,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,1,0.png"
+
+          alt="" title="|6,1,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,1,1.png" alt="" title="|6,1,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,2,0.png"
+
+          alt="" title="|6,2,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,2,1.png" alt="" title="|6,2,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,2,2.png"
+
+          alt="" title="|6,2,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,3,0.png" alt="" title="|6,3,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,3,1.png"
+
+          alt="" title="|6,3,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,3,2.png" alt="" title="|6,3,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,3,3.png"
+
+          alt="" title="|6,3,3,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,4,0.png" alt="" title="|6,4,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,4,1.png"
+
+          alt="" title="|6,4,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,4,2.png" alt="" title="|6,4,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,4,3.png"
+
+          alt="" title="|6,4,3,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,4,4.png" alt="" title="|6,4,4,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,5,0.png"
+
+          alt="" title="|6,5,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,5,1.png" alt="" title="|6,5,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,5,2.png"
+
+          alt="" title="|5,6,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,5,3.png" alt="" title="|6,5,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,5,4.png"
+
+          alt="" title="|6,5,4,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_6,5,5.png" alt="" title="|6,5,5,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,0,0.png"
+
+          alt="" title="|7,0,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,1,0.png" alt="" title="|7,1,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,1,1.png"
+
+          alt="" title="|7,1,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,2,0.png" alt="" title="|7,2,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,2,1.png"
+
+          alt="" title="|7,2,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,2,2.png" alt="" title="|7,2,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,3,0.png"
+
+          alt="" title="|7,3,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,3,1.png" alt="" title="|7,3,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,3,2.png"
+
+          alt="" title="|7,3,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,3,3.png" alt="" title="|7,3,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,4,0.png"
+
+          alt="" title="|7,4,0,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,4,1.png" alt="" title="|7,4,1,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,4,2.png"
+
+          alt="" title="|7,4,2,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,4,3.png" alt="" title="|7,4,3,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,4,4.png"
+
+          alt="" title="|7,4,4,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,5,0.png" alt="" title="|7,5,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,5,1.png"
+
+          alt="" title="|7,5,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,5,2.png" alt="" title="|7,5,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,5,3.png"
+
+          alt="" title="|7,5,3,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,5,4.png" alt="" title="|7,5,4,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,5,5.png"
+
+          alt="" title="|7,5,5,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,0.png" alt="" title="|7,6,0,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,1.png"
+
+          alt="" title="|7,6,1,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,2.png" alt="" title="|7,6,2,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,3.png"
+
+          alt="" title="|7,6,3,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,4.png" alt="" title="|7,6,4,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+      <div style="text-align: center;">&nbsp;<img src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,5.png"
+
+          alt="" title="|7,6,5,1/2&gt;" style="width: 570px; height: 480px;"><img
+
+          src="SchrodingerHydrogen/SchrodingerHydrogen2D_7,6,6.png" alt="" title="|7,6,6,1/2&gt;"
+
+          style="width: 570px; height: 480px;"></div>
+    </div>
+  </body>
+</html>
