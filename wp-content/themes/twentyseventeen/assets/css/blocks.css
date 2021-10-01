@@ -68,6 +68,7 @@ p.has-drop-cap:not(:focus)::first-letter {
 
 .wp-block-gallery figcaption {
 	font-style: italic;
+	color: #fff;
 }
 
 .wp-block-gallery.aligncenter {
