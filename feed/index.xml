@@ -12,7 +12,7 @@
 	<atom:link href="https://unitnormal.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://unitnormal.github.io/</link>
 	<description>Pictorial Equation</description>
-	<lastBuildDate>Fri, 01 Oct 2021 01:52:42 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 01 Oct 2021 06:05:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -35,9 +35,6 @@
 
 
 <p>A non-relativistic electron in a spherical potential, namely the Coulomb potential, can be modeled using the Schrödinger equation</p>
-
-
-<p class="ql-center-displayed-equation" style="line-height: 44px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="https://unitnormal.github.io/wp-content/ql-cache/quicklatex.com-c759f98f45965695125c99c52119211a_l3.png" height="44" width="217" class="ql-img-displayed-equation quicklatex-auto-format" alt="&#92;&#91; &#92;&#108;&#101;&#102;&#116;&#40;&#92;&#102;&#114;&#97;&#99;&#123;&#112;&#94;&#50;&#125;&#123;&#50;&#109;&#95;&#101;&#125;&#45;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#123;&#52;&#92;&#112;&#105;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;&#48;&#125;&#92;&#102;&#114;&#97;&#99;&#123;&#90;&#101;&#94;&#50;&#125;&#123;&#114;&#125;&#92;&#114;&#105;&#103;&#104;&#116;&#41;&#92;&#112;&#115;&#105;&#32;&#61;&#32;&#69;&#92;&#112;&#115;&#105; &#92;&#93;" title="Rendered by QuickLaTeX.com"/></p>
 
 
 
